@@ -4,7 +4,7 @@ nums = {'zero': 'ноль', 'one': 'один', 'two': 'два', 'three': 'три
 
 
 def num_translate_adv(x):
-    if x.islower in nums:
+    if x.lower() in nums:
         if x.islower():
             return nums[x]
         else:

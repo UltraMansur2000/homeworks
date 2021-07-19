@@ -1,4 +1,5 @@
 dictionary = {}
+sorted_dictionary = {}
 
 
 def thesaurus_adv(*args):
@@ -12,6 +13,11 @@ def thesaurus_adv(*args):
         else:
             dictionary[surname_letter][name_letter].append(name)
 
+    list_keys = list(dictionary.keys())
+    list_keys.sort()
+    for key in list_keys:
+        sorted_dictionary[key] = dictionary[key]
+    return sorted_dictionary
 
-thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
-print(dictionary)
+
+print(thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева"))
